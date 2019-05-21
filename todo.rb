@@ -15,6 +15,7 @@ before do
     @posts = Post.all
 end
 
+#mainroot
 get "/main" do
     @title = "mytodo"
     erb :main

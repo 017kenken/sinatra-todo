@@ -20,10 +20,6 @@ get "/main" do
     erb :main
 end
 
-get "/post" do
-    erb :post
-end
-
 post "/create" do
     Post.create({
     body: params[:body]

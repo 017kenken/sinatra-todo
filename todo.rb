@@ -13,15 +13,14 @@ end
 
 before do
     @posts = Post.all
+    @title = "mytodo"
 end
 
 get "/main" do
-    @title = "mytodo"
     erb :main
 end
 
 get "/post" do
-    @title = "mytodo"
     erb :post
 end
 

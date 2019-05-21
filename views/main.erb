@@ -1,0 +1,25 @@
+<h1>todo</h1>
+<ul>
+  <% @posts.each do |post| %>
+  <li data-id="<%= post.id%>">
+    <input type="checkbox" class="delete">
+    <%= Rack::Utils.escape_html(post.body) %>
+    <%= post.created.strftime("%F %R") %>
+  </li>
+  <% end %>
+</ul>
+<a href="/post" class="badge badge-primary">追加</a>
+
+<!--<p>
+  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapsetask" aria-expanded="false" aria-controls="collapseExample">
+    追加
+  </button>
+</p>
+<div class="collapse" id="collapsetask">
+  <div class="card card-body">
+    <form action="/create" method="post">
+        <input class="form-control" type="text" name="body">
+        <input type="submit" class="btn btn-primary" value="追加">
+    </form>
+  </div>
+</div>-->

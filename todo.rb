@@ -15,7 +15,7 @@ before do
     @posts = Post.all
 end
 
-#mainroot
+#mainroot training
 get "/main" do
     @title = "mytodo"
     erb :main
